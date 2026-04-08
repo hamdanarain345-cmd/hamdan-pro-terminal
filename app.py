@@ -479,3 +479,5 @@ elif selected == "📓 Journal":
         for f in [TRADE_FILE, BACKTEST_FILE, LEARNING_FILE]: 
             if os.path.exists(f): os.remove(f)
         st.rerun()
+
+   # Final Mobile Update
