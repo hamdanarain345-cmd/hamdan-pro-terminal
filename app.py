@@ -13,11 +13,12 @@ import random
 try:
     from twilio.rest import Client
     TWILIO_INSTALLED = True
-except ImportError:
+    # Yahan Streamlit ke 'Secrets' use kiye hain taake password safe rahay
+    TWILIO_ACCOUNT_SID = st.secrets["TWILIO_ACCOUNT_SID"]
+    TWILIO_AUTH_TOKEN = st.secrets["TWILIO_AUTH_TOKEN"]
+except Exception as e:
     TWILIO_INSTALLED = False
 
-TWILIO_ACCOUNT_SID = 'AC40a3b6a7c95e5c36417852c8c9101170' 
-TWILIO_AUTH_TOKEN = 'c24fbf3c7f51fbe9d6987c827b13436e'
 TWILIO_SENDER_NUMBER = '+15186349627'
 MY_PHONE_NUMBERS = ['+923136538984', '+923153745987']
 
